@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="post">
+
+  <h1>{{ page.title}}</h1>
+  {% capture post_date %}{{ page.date }}{% endcapture %}
+  {% capture post_word_count %}{{ page.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
+  {% include post_attrs.html date=post_date wc=post_word_count %}
+
+  {{ content }}
+
+  {% if page.tags %}
+    <div>标签:&nbsp;&nbsp;·&nbsp;
+      {% for tag in page.tags %}
+        <a href="/tags#{{ tag | slugify }}"><code class="highligher-rouge"><nobr>{{ tag }}</nobr></code></a>&nbsp;·&nbsp;
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  </span>
+  {% if jekyll.environment == "production" %}
+    {% include disqus.html %}
+  {% endif %}
+</article>

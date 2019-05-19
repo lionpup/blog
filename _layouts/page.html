@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="page">
+
+  <h1>{{ page.title }}</h1>
+  <div>{{ content }}</div>
+
+  </span>
+  {% if jekyll.environment == "production" %}
+    {% include disqus.html %}
+  {% endif %}
+</article>

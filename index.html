@@ -1,0 +1,32 @@
+---
+layout: default
+title: Home
+---
+
+<div class="page">
+  {% for post in paginator.posts %}
+    <article class="post">
+      <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h1>
+      {% capture post_date %}{{ post.date }}{% endcapture %}
+      {% capture post_word_count %}{{ post.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
+      {% include post_attrs.html date=post_date wc=post_word_count %}
+      <div class="excerpt">
+        {{ post.excerpt }}
+        <a class="read-more" href="{{ post.url | prepend: site.baseurl }}"> » 阅读全文</a>
+      </div>
+    </article>
+  {% endfor %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="pgc">上一页</a>
+    {% else %}
+      <span class="pgc inactive">上一页</span>
+    {% endif %}
+    <span class="page_number ">第{{ paginator.page }} / {{ paginator.total_pages }}页</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="pgc">下一页</a>
+    {% else %}
+      <span class="pgc inactive">下一页</span>
+    {% endif %}
+  </div>
+</div>
