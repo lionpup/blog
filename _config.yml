@@ -7,9 +7,9 @@ title: 破道诗
 subtitle: 路不在脚下，而在人心
 email: wsroseanne@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  破道诗官方网站
+  记录本人写作的日常、感想、和一些写作小知识。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://wroseanne.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lionpup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:categories/:year-:month-:day-:title
 defaults:
