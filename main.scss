@@ -59,7 +59,6 @@ h5 {
 a {
   color: $link;
   text-decoration: none;
-  cursor: pointer;
   &:hover, &:active {
     color: $link;
   }
@@ -109,6 +108,10 @@ img {
 .date {
   color: $mediumGray;
   font-size: 14px;
+  letter-spacing: 1px;
+  i {
+    margin-right: 6px;
+  }
 }
 
 .post_title {
@@ -186,27 +189,33 @@ nav {
   font-family: $helveticaNeue;
   margin-top: 14px;
   line-height: 30px;
-
   @include mobile {
     margin-top: 9px;
     display: block;
   }
-
   a {
     color: $darkGray;
     letter-spacing: 1px;
     font-size: 14px;
+  }
+}
 
+.nav-left {
+  float: left;
+  @include mobile {
+    float: none;
+  }
+  a {
     @include mobile {
       margin: 0;
       color: $link;
     }
   }
-  .nav-right {
-    float: right;
-    @include mobile {
-      float: none;
-    }
+}
+.nav-right {
+  float: right;
+  @include mobile {
+    float: none;
   }
 }
 
@@ -240,6 +249,7 @@ article {
   .comments {
     margin-top: 2em;
   }
+  margin: 0 8px;
 }
 
 .page {
