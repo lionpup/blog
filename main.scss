@@ -19,7 +19,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $darkerGray;
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.7;
@@ -44,17 +43,11 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 16px;
-}
+h3 { font-size: 16px; }
 
-h4 {
-  font-size: 14px;
-}
+h4 { font-size: 14px; }
 
-h5 {
-  font-size: 12px;
-}
+h5 { font-size: 12px; }
 
 a {
   color: $link;
@@ -158,12 +151,6 @@ img {
   }
 }
 
-.site-info {
-  @include mobile {
-    margin: 0 auto;
-  }
-}
-
 .site-name {
   margin: 0;
   color: $darkGray;
@@ -172,17 +159,6 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    display: block;
-    margin: 3px 0;
-  }
 }
 
 nav {
@@ -204,14 +180,13 @@ nav {
   float: left;
   @include mobile {
     float: none;
-  }
-  a {
-    @include mobile {
+    a {
       margin: 0;
       color: $link;
     }
   }
 }
+
 .nav-right {
   float: right;
   @include mobile {
