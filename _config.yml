@@ -12,6 +12,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lionpup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:categories/:year-:month-:day-:title
+
+collections:
+  category:
+    output: true
+
 defaults:
   -
     scope:
@@ -24,6 +29,12 @@ defaults:
       path: "pages"
     values:
       layout: page
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 social-media:
   - {class: 'fas fa-envelope', link: 'mailto:wsroseanne@gmail.com', name: 'Email'}
@@ -55,3 +66,6 @@ exclude:
   - CNAME
 
 # theme: jekyll-theme-dinky
+
+category_url_mapping:
+  - {category: '写作日常', url: 'writing'}

@@ -8,5 +8,11 @@
   <i class="fas fa-feather-alt" aria-hidden="true"></i>
   {{ word_count }}字
   <i class="far fa-folder-open" aria-hidden="true"></i>
-  分类：{{ post.categories | first }}
+  {% assign cat = post.categories | first %}
+  {%- capture cat_url -%}
+    {%- for pair in site.category_url_mapping -%}
+      {% if pair.category == cat %}{{ pair.url }}{%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  <a href="/category/{{cat_url}}"><code class="highligher-rouge"><nobr>{{ cat }}</nobr></code></a>
 </span>
