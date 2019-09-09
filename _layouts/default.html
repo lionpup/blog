@@ -22,9 +22,13 @@ layout: compress
             {% for item in site.social-media %}
               {% assign first_char = item.link | slice: 0 %}
               {% if first_char == '/' %}
-                <a href="{{ site.baseurl }}{{ item.link }}" target="_blank"><i class="{{ item.class }}" aria-hidden="true"></i></a>
+                <a href="{{ site.baseurl }}{{ item.link }}" target="_blank">
+                  <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
+                </a>
               {% else %}
-                <a href="{{ item.link }}" target="_blank"><i class="{{ item.class }}" aria-hidden="true"></i></a>
+                <a href="{{ item.link }}" target="_blank">
+                  <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
+                </a>
               {% endif %}
             {% endfor %}
           </div>

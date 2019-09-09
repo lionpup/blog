@@ -1,1 +1,12 @@
-<span class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i>{{ include.date | date: "%Y年%m月%d日" }} · {{include.wc}}字</span>
+
+{% assign post = include.page %}
+{% capture word_count %}{{ page.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
+
+<span class="date">
+  <i class="far fa-calendar-alt" aria-hidden="true"></i>
+  {{ post.date | date: "%Y-%m-%d" }}
+  <i class="fas fa-feather-alt" aria-hidden="true"></i>
+  {{ word_count }}字
+  <i class="far fa-folder-open" aria-hidden="true"></i>
+  分类：{{ post.categories | first }}
+</span>

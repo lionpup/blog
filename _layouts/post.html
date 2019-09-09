@@ -4,9 +4,8 @@ layout: default
 <article class="post">
 
   <h1>{{ page.title}}</h1>
-  {% capture post_date %}{{ page.date }}{% endcapture %}
-  {% capture post_word_count %}{{ page.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
-  {% include post_attrs.html date=post_date wc=post_word_count %}
+
+  {% include post_attrs.html page=page %}
 
   {{ content }}
 
