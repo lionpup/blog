@@ -9,7 +9,7 @@ layout: default
 
   {{ content }}
 
-  {% if page.tags %}
+  {% if page.tags.size > 0 %}
     <div>标签:&nbsp;&nbsp;·&nbsp;
       {% for tag in page.tags %}
         <a href="/tags#{{ tag | slugify }}"><code class="highligher-rouge"><nobr>{{ tag }}</nobr></code></a>&nbsp;·&nbsp;
