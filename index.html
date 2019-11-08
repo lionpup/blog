@@ -7,9 +7,7 @@ title: Home
   {% for post in paginator.posts %}
     <article class="post">
       <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h1>
-      {% capture post_date %}{{ post.date }}{% endcapture %}
-      {% capture post_word_count %}{{ post.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
-      {% include post_attrs.html date=post_date wc=post_word_count %}
+      {% include post_attrs.html page=post %}
       <div class="excerpt">
         {{ post.excerpt }}
         <a class="read-more" href="{{ post.url | prepend: site.baseurl }}"> » 阅读全文</a>

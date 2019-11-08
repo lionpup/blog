@@ -18,6 +18,6 @@ permalink: /about/
 
 ---
 
-Credits | 特别鸣谢
+Credits `|` 特别鸣谢
 
 网站的搭建参考了 [Jekyll Now](https://github.com/barryclark/jekyll-now) 和 [Lagrange](https://github.com/LeNPaul/Lagrange)。

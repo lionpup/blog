@@ -1,6 +1,6 @@
 
 {% assign post = include.page %}
-{% capture word_count %}{{ page.content |  strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
+{% capture word_count %}{{ post.content | strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
 
 <span class="date">
   <i class="far fa-calendar-alt" aria-hidden="true"></i>
