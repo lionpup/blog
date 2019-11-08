@@ -3,13 +3,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 笔名「柳熠」
+title: 白崇容
 email: wsroseanne@gmail.com
-copyright: 柳熠
-description: >- # this means to ignore newlines until "baseurl:"
-  想到什么写什么的博客，主题通常为作品、写作相关、各类感想。
+copyright: 白崇容
+description: >-
+  小说作家。青年小说，评论感想。官方网站。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://lionpup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.baichr.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:categories/:year-:month-:day-:title
 
