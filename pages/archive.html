@@ -4,11 +4,12 @@ title: 全部文章
 permalink: /posts/
 ---
 
-  <section class="archive_list">
-    {% for post in site.posts %}
-      <div class="post_title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a>&nbsp
-        <span class="date">{{ post.date | date: "%Y·%m·%d" }}</span>
-      </div>
-    {% endfor %}
-  </section>
+<p></p>
+<section class="archive_list">
+  {% for post in site.posts %}
+    <div class="post_title">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a>&nbsp
+      <span class="date">{{ post.date | date: "%Y·%m·%d" }}</span>
+    </div>
+  {% endfor %}
+</section>
