@@ -5,11 +5,13 @@ permalink: /posts/
 ---
 
 <p></p>
-<section class="archive_list">
-  {% for post in site.posts %}
-    <div class="post_title">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a>&nbsp
-      <span class="date">{{ post.date | date: "%Y·%m·%d" }}</span>
-    </div>
-  {% endfor %}
-</section>
+
+{% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+{% for yearMonth in postsByYearMonth %}
+  <h3>{{ yearMonth.name }}</h3>
+    <ul>
+      {% for post in yearMonth.items %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;<span class="attributes">{{ post.date | date: "%Y-%m-%d" }}</span></li>
+      {% endfor %}
+    </ul>
+{% endfor %}

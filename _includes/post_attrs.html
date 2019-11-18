@@ -2,7 +2,7 @@
 {% assign post = include.page %}
 {% capture word_count %}{{ post.content | strip_html | strip_newlines | remove: " " | remove: "—" | size }}{% endcapture %}
 
-<span class="date">
+<span class="attributes">
   <i class="far fa-calendar-alt" aria-hidden="true"></i>
   {{ post.date | date: "%Y-%m-%d" }}
   <i class="fas fa-feather-alt" aria-hidden="true"></i>
