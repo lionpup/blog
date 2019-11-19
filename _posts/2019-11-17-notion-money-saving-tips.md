@@ -1,6 +1,7 @@
 ---
 title: Notion Money Saving Tips - How To Stay On The Free Plan
-category: Notion
+categories: en
+tags: Notion
 ---
 
 ## Tip #1: create a new workspace
