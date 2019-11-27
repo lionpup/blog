@@ -11,35 +11,21 @@ body {
   color: $darkGray;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 615px;
-  padding: 0 10px; // Mobile
-}
-
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
-  margin: 1em 0 5px;
-
-  line-height: 1.7;
-  @include mobile {
-    line-height: 1.4;
-  }
-}
-
-h1 {
   font-weight: 300;
-  font-size: 20px;
+  margin: 1em 0 5px;
+  line-height: 1.7em;
   a {
     color: inherit;
   }
-}
-h2 {
-  font-size: 18px;
-  a {
-    color: inherit;
+  @include mobile {
+    line-height: 1.4em;
   }
 }
+
+h1 { font-size: 20px; }
+h2 { font-size: 18px; }
 h3 { font-size: 16px; }
 h4 { font-size: 14px; }
 h5 { font-size: 12px; }
@@ -50,35 +36,6 @@ a {
   &:hover, &:active {
     color: $link;
   }
-}
-
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
-  li {
-    padding-bottom: 0.8em;
-  }
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ul.category {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ul ul, ol ul {
-  list-style-type: circle;
-}
-
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
 }
 
 em, i {
@@ -99,6 +56,10 @@ img {
   letter-spacing: 1px;
 }
 
+.sattr {
+  margin-left: 6px;
+}
+
 .post_title {
   line-height: 2em;
 }
@@ -117,74 +78,21 @@ img {
   color: $mediumGray;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
 
-.masthead {
-  padding: 30px 0 8px;
-  font-weight: 300;
-  border-bottom: 1px solid $lightGray;
-
+.container {
+  margin: 0 300px;
+  min-width: 615px;
   @include mobile {
-    text-align: center;
+    margin: 0 auto;
+    min-width: 0;
+    padding: 0 10px; // Mobile
   }
 }
 
-.site-name {
-  margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-nav {
-  font-family: $helveticaNeue;
-  margin-top: 14px;
-  line-height: 30px;
-  @include mobile {
-    margin-top: 9px;
-    display: block;
-  }
-  a {
-    color: $darkGray;
-    letter-spacing: 1px;
-    font-size: 14px;
-  }
-}
-
-.nav-left {
-  float: left;
-  @include mobile {
-    float: none;
-  }
-}
-
-.nav-right {
-  float: right;
-  @include mobile {
-    float: none;
-  }
-}
-
-.navbar-item {
-  padding-left: 16px;
-}
+@import "header";
 
 article {
   padding-bottom: 8px;
@@ -207,9 +115,7 @@ article {
   }
 }
 
-.post .comments {
-  margin-top: 2em;
-}
+@import "post";
 
 .page {
   article {

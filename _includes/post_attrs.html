@@ -5,9 +5,9 @@
 <span class="attributes">
   <i class="far fa-calendar-alt" aria-hidden="true"></i>
   {{ post.date | date: "%Y-%m-%d" }}
-  <i class="fas fa-feather-alt" aria-hidden="true"></i>
+  <i class="fas fa-feather-alt sattr" aria-hidden="true"></i>
   {{ word_count }}字
-  <i class="far fa-folder-open" aria-hidden="true"></i>
+  <i class="far fa-folder-open sattr" aria-hidden="true"></i>
   {% assign cat = post.categories | first %}
   {%- capture cat_url -%}
     {%- for pair in site.category_url_mapping -%}

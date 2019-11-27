@@ -11,31 +11,32 @@ layout: compress
     {% endif %}
     <div class="container">
       <header class="masthead clearfix">
+        <div id="logo">
           <a href="{{ site.baseurl }}/" class="site-name">{{ site.title }}</a>
-        <nav>
-          <div class="nav-left">
-            <a href="{{ "/" | prepend: site.baseurl }}">首页</a>
-            <a class="navbar-item" href="{{ "/posts" | prepend: site.baseurl }}">存档</a>
-            <a class="navbar-item" href="{{ "/about" | prepend: site.baseurl }}">关于</a>
-          </div>
-          <div class="nav-right">
-            {% for item in site.social-media %}
-              {% assign first_char = item.link | slice: 0 %}
-              {% if first_char == '/' %}
-                <a href="{{ site.baseurl }}{{ item.link }}" target="_blank">
-                  <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
-                </a>
-              {% else %}
-                <a href="{{ item.link }}" target="_blank">
-                  <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
-                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </nav>
+        </div>
+        <div class="links">
+          <a href="{{ "/posts" | prepend: site.baseurl }}">Archive · 存档</a>
+          <a href="{{ "/about" | prepend: site.baseurl }}">About · 关于</a>
+        </div>
+        <div class="contacts">
+          {% for item in site.social-media %}
+            {% assign first_char = item.link | slice: 0 %}
+            {% if first_char == '/' %}
+              <a href="{{ site.baseurl }}{{ item.link }}" target="_blank">
+                <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
+              </a>
+            {% else %}
+              <a href="{{ item.link }}" target="_blank">
+                <i class="{{ item.class }}" aria-label="{{ item.name }}"></i>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
       </header>
       {{ content }}
       <footer>
+          <script async src="https://cse.google.com/cse.js?cx=006656445093814737959:ip3x7xktabp"></script>
+<div class="gcse-search"></div>
         <hr>
         <p>© 2019 · {{ site.copyright }} · All rights reserved</p>
       </footer>

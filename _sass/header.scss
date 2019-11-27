@@ -1,0 +1,44 @@
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 8px;
+  font-weight: 300;
+  border-bottom: 1px solid $lightGray;
+
+  @include mobile {
+    display: block;
+    text-align: center;
+  }
+}
+
+#logo, .links, .contacts {
+  display: inline-block;
+  line-height: 30px;
+
+  @include mobile {
+    margin-top: 9px;
+    display: block;
+  }
+}
+
+.links a {
+  padding-right: 10px;
+  color: $darkGray;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  &:hover, &:active {
+    color: $link;
+  }
+}
+
+#logo {
+  margin: auto auto auto 0px;
+}
+
+.site-name {
+  margin: 0;
+  color: $darkGray;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
