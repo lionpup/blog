@@ -60,10 +60,6 @@ img {
   margin-left: 6px;
 }
 
-.post_title {
-  line-height: 2em;
-}
-
 .pagination {
   text-align: center;
   margin: 20px 0;
@@ -115,8 +111,6 @@ article {
   }
 }
 
-@import "post";
-
 .page {
   article {
     border-bottom: 1px solid $lightGray;
@@ -128,6 +122,12 @@ article {
   .excerpt {
     margin: 16px 0;
   }
+}
+
+.post-pagination {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .page:last-child {

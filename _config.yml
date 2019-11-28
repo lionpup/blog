@@ -22,7 +22,7 @@ defaults:
     scope:
       type: "posts"
     values:
-      layout: post
+      layout: page
       excerpt_separator: <!--more-->
   -
     scope:
