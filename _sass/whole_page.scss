@@ -8,7 +8,7 @@ body {
 
 .container {
   margin: 0 300px;
-  min-width: 615px;
+  min-width: 715px;
   @include mobile {
     margin: 0 auto;
     min-width: 0;
@@ -70,4 +70,20 @@ p {
 
 li p {
   margin: 0;
+}
+.left-right-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left-panel, .right-panel{
+  vertical-align: top;
+}
+
+.left-panel {
+  width: calc(70% - 30px);
+}
+
+.right-panel {
+  width: 30%;
+  margin-top: 11px;
 }

@@ -4,10 +4,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 白崇容
-email: wsroseanne@gmail.com
+email: baichr8@gmail.com
 copyright: 白崇容
 description: >-
-  小说作家。青年小说，评论感想。官方网站。
+  A blog about novel writing, politics, writing life and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.baichr.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -37,9 +37,9 @@ defaults:
       layout: "category"
 
 social-media:
-  - {class: 'fas fa-envelope', link: 'mailto:wsroseanne@gmail.com', name: 'Email'}
+  - {class: 'fas fa-envelope', link: 'mailto:baichr8@gmail.com', name: 'Email'}
   - {class: 'fas fa-rss-square', link: '/feed.xml', name: 'RSS feed'}
-  - {class: 'fab fa-twitter', link: 'http://twitter.com/prosrose', name: 'Twitter'}
+  - {class: 'fab fa-twitter', link: 'http://twitter.com/baichro', name: 'Twitter'}
 
 # Build settings
 markdown: kramdown

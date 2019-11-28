@@ -13,6 +13,7 @@ layout: compress
       <header class="masthead clearfix">
         <div id="logo">
           <a href="{{ site.baseurl }}/" class="site-name">{{ site.title }}</a>
+          <div>{{ site.description }}</div>
         </div>
         <div class="links">
           <a href="{{ "/posts" | prepend: site.baseurl }}">Archive · 存档</a>
@@ -33,9 +34,18 @@ layout: compress
           {% endfor %}
         </div>
       </header>
-      {{ content }}
+      <div class="left-right-container">
+        <div class="left-panel">
+        {{ content }}
+        </div>
+
+        <div class="right-panel">
+          <a class="twitter-timeline" href="https://twitter.com/baichro?ref_src=twsrc%5Etfw">Tweets by baichro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
       <footer>
         <hr>
+        <a href="https://twitter.com/baichro?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @baichro</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <p>© 2019 · {{ site.copyright }} · All rights reserved</p>
       </footer>
     </div>
