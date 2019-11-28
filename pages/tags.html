@@ -1,6 +1,6 @@
 ---
-layout: page
-title: 标签
+layout: simple
+title: Tags · 标签
 permalink: /tags/
 ---
 
@@ -8,8 +8,20 @@ permalink: /tags/
   {% include collect_tags.html %}
 {% endif %}
 
-<ul>
 {% for tag in tags %}
-  <li><a href="#{{ tag | slugify }}"> {{ tag }} [{{ site.tags[tag] | size }}]</a></li>
+  {% capture tag_tag %}{{ tag | slugify }}{% endcapture %}
+  <h3 id="{{ tag_tag }}"><a href="/tags/#{{ tag_tag }}">
+    <i class="fas fa-tags"></i> {{ tag }} ({{ site.tags[tag] | size }})
+  </a></h3>
+  {% for post in site.posts %}
+  <ul style="padding-left:30px;">
+    {% if post.tags contains tag %}
+    <li class="post-list">
+      <i class="far fa-file-alt"></i> <a href="{{ post.url }}">
+      {{ post.title }} <span class="attributes">{{ post.date | date: "%Y-%m-%d" }}</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endfor %}
 {% endfor %}
-</ul>

@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
+<h1><a href="/categories">All Categories · 全部分类</a></h1>
+<article class="page">
+<h3 class="cat"><i class="far fa-folder-open sattr" aria-hidden="true"></i> 分类：{{ page.category }}</h3>
 
-<div class="blog list">
-  <h1 class="tag-list-header"><i class="far fa-folder-open" aria-hidden="true"></i>&nbsp;
-  分类：{{ page.category }}</h1>
-
-  <ul>
-    {% for post in site.categories[page.category] %}
-      <li>{{ post.title }}</li>
-    {% endfor %}
+<ul style="padding-left:30px;">
+  {% for post in site.categories[page.category] %}
+    <li class="post-list">
+      <i class="far fa-file-alt"></i>
+      <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;<span class="attributes">{{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {% endfor %}
   </ul>
-</div>
+</article>

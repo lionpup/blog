@@ -7,12 +7,14 @@
   {{ post.date | date: "%Y-%m-%d" }}
   <i class="fas fa-feather-alt sattr" aria-hidden="true"></i>
   {{ word_count }}字
-  <i class="far fa-folder-open sattr" aria-hidden="true"></i>
   {% assign cat = post.categories | first %}
   {%- capture cat_url -%}
     {%- for pair in site.category_url_mapping -%}
       {% if pair.category == cat %}{{ pair.url }}{%- endif -%}
     {%- endfor -%}
   {%- endcapture -%}
-  <a href="/category/{{cat_url}}"><code class="highligher-rouge"><nobr>{{ cat }}</nobr></code></a>
+  {% if cat != null and cat != "" and cat_url != null and cat_url != "" %}
+    <i class="far fa-folder-open sattr" aria-hidden="true"></i>
+    <a href="/categories/{{cat_url}}"><code class="highligher-rouge"><nobr>{{ cat }}</nobr></code></a>
+  {% endif %}
 </span>

@@ -167,9 +167,14 @@ footer {
   margin-bottom: 2em;
 }
 
-.tag-list-header {
-  color: $darkGray;
-  font-weight: 300;
+.post-list {
+  margin: 0.5em 0;
+  a {
+    color: inherit;
+    &:hover, &:active {
+      color: $link;
+    }
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

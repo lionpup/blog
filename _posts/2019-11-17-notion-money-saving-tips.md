@@ -1,6 +1,6 @@
 ---
 title: Notion Money Saving Tips - How To Stay On The Free Plan
-categories: en
+categories: English
 tags: Notion
 ---
 

@@ -69,3 +69,5 @@ exclude:
 
 category_url_mapping:
   - {category: '写作日常', url: 'writing'}
+  - {category: 'English', url: 'english'}
+  - {category: '乱七八糟的想法', url: 'thoughts'}

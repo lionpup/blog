@@ -1,6 +1,6 @@
 ---
 title: The Drawbacks of Notion
-categories: en
+categories: English
 tags: Notion
 ---
 
