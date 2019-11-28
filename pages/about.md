@@ -1,5 +1,5 @@
 ---
-layout: two-panel
+layout: default
 title: 作者简历
 permalink: /about/
 ---

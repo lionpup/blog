@@ -1,0 +1,15 @@
+.share {
+  display: flex;
+}
+
+.twitter-share-button, fb-share-button {
+  flex-shrink: 1;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.post-pagination {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+}

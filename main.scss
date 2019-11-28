@@ -4,6 +4,7 @@
 @import "reset";
 @import "variables";
 @import "whole_page";
+@import "post";
 
 .attributes {
   color: $mediumGray;
@@ -68,12 +69,6 @@ article {
   .excerpt {
     margin: 16px 0;
   }
-}
-
-.post-pagination {
-  margin-top: 28px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .page:last-child {
