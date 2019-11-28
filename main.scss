@@ -3,55 +3,11 @@
 
 @import "reset";
 @import "variables";
-
-body {
-  font: 14px/1.4 $helvetica;
-  color: $darkGray;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 0.5px;
-  font-weight: 300;
-  margin: 1em 0 5px;
-  line-height: 1.7em;
-  a {
-    color: inherit;
-  }
-  @include mobile {
-    line-height: 1.4em;
-  }
-}
-
-h1 { font-size: 20px; }
-h2 { font-size: 18px; }
-h3 { font-size: 16px; }
-h4 { font-size: 14px; }
-h5 { font-size: 12px; }
-h6 { font-size: 10px; }
-
-a {
-  color: $link;
-  text-decoration: none;
-  &:hover, &:active {
-    color: $link;
-  }
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
+@import "whole_page";
 
 .attributes {
   color: $mediumGray;
-  font-size: 13px;
+  font: 13px Arial, san-serif;
   letter-spacing: 1px;
 }
 
@@ -76,16 +32,6 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-.container {
-  margin: 0 300px;
-  min-width: 615px;
-  @include mobile {
-    margin: 0 auto;
-    min-width: 0;
-    padding: 0 10px; // Mobile
-  }
-}
 
 @import "header";
 
@@ -135,23 +81,6 @@ article {
 
 .attrs {
   padding-left: 8px;
-}
-
-p {
-  margin: 16px 0;
-  line-height: 28px;
-  font-family: Verdana, Arial, sans-serif;
-}
-
-li p {
-  margin: 0;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: $lightGray;
-  margin: 20px 0;
 }
 
 footer {

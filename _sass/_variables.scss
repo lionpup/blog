@@ -1,5 +1,5 @@
 // Colors
-$link: #2196F3;
+$link: #0d8aee;
 
 // Grays
 $darkerGray: #222;
@@ -8,13 +8,14 @@ $gray: #666;
 $lightGray: #eee;
 $mediumGray: #9a9a9a;
 
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
     @content;
   }
+}
+
+@font-face {
+    font-family: HanSerifLight;
+    src: url("assets/SourceHanSerifSC-Light.otf") format("opentype");
 }

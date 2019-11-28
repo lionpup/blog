@@ -17,6 +17,6 @@
   {%- endcapture -%}
   {% if cat != null and cat != "" and cat_url != null and cat_url != "" %}
     <i class="far fa-folder-open sattr" aria-hidden="true"></i>
-    <a href="/categories/{{cat_url}}"><code class="highligher-rouge"><nobr>{{ cat }}</nobr></code></a>
+    <a href="/categories/{{cat_url}}">{{ cat }}</a>
   {% endif %}
 </span>
