@@ -12,4 +12,11 @@
   margin-top: 28px;
   display: flex;
   justify-content: space-between;
+  .prev, .next {
+    flex-shrink: 1;
+    width: 48%;
+  }
+  .next {
+    text-align: right;
+  }
 }

@@ -7,12 +7,11 @@ body {
 }
 
 .container {
-  margin: 0 300px;
-  min-width: 715px;
+  margin: 0 auto;
+  max-width: 800px;
   @include mobile {
     margin: 0 auto;
-    min-width: 0;
-    padding: 0 10px; // Mobile
+    padding: 0 16px; // Mobile
   }
   h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
@@ -71,19 +70,30 @@ p {
 li p {
   margin: 0;
 }
+
 .left-right-container {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+    display: block;
+  }
 }
+
 .left-panel, .right-panel{
   vertical-align: top;
 }
 
 .left-panel {
   width: calc(70% - 30px);
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .right-panel {
   width: 30%;
   margin-top: 11px;
+  @include mobile {
+    display: none;
+  }
 }
