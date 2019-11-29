@@ -1,11 +1,12 @@
 .share {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.twitter-share-button, fb-share-button {
+.twitter-follow-button, .twitter-share-button, fb-share-button {
   flex-shrink: 1;
   align-self: center;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
 }
 
 .post-pagination {
