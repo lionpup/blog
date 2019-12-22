@@ -16,7 +16,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
     font-weight: 600;
-    margin: 1em 0 5px;
+    margin: 2em 0 5px; // To combat margin collapsing with <p> tags.
     line-height: 1.7em;
     a {
       color: inherit;
@@ -84,14 +84,14 @@ li p {
 }
 
 .left-panel {
-  width: calc(70% - 30px);
+  width: calc(100% - 280px);
   @include mobile {
     width: 100%;
   }
 }
 
 .right-panel {
-  width: 30%;
+  width: 260px;
   margin-top: 11px;
   @include mobile {
     display: none;

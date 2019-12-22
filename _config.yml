@@ -3,11 +3,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 白崇容
+title: 雜文宅
 email: baichr8@gmail.com
 copyright: 白崇容
 description: >-
-  A blog about novel writing, politics, writing life and more.
+  白崇容的小博客
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.baichr.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -68,6 +68,6 @@ exclude:
 # theme: jekyll-theme-dinky
 
 category_url_mapping:
-  - {category: '写作日常', url: 'writing'}
+  - {category: '新手作者', url: 'writing'}
   - {category: 'English', url: 'english'}
   - {category: '乱七八糟的想法', url: 'thoughts'}

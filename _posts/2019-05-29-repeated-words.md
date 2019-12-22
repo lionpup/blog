@@ -1,6 +1,6 @@
 ---
 title: 过度使用某个字词
-category: 写作日常
+category: 新手作者
 ---
 
 
