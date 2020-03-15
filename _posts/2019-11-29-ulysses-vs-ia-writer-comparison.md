@@ -1,7 +1,8 @@
 ---
 title: Ulysses vs. iA Writer Comparison - From a CJK Perspective
 categories: English
-tags: 新手作者
+tags: 
+- 写作发表
 ---
 
 *(CJK stands for “Chinese, Japanese, Korean”.)*
